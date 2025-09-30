@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
-const repoName = "https://YukiKaneko211.github.io/csv-formatter/"; // ← あなたのリポジトリ名に置き換える
+const repoName = "csv-formatter"; // リポジトリ名だけ！
 
 const nextConfig = {
-  output: "export",        // 静的出力モード
+  output: "export",
   images: {
-    unoptimized: true,     // GH Pagesでは画像最適化不可
+    unoptimized: true,
   },
   basePath: process.env.NODE_ENV === "production" ? `/${repoName}` : "",
   assetPrefix: process.env.NODE_ENV === "production" ? `/${repoName}/` : "",
