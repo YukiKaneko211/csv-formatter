@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
-const repoName = "csv-formatter"; // リポジトリ名だけ！
+const repoName = "csv-formatter";
 
 const nextConfig = {
-  output: "export",
+  output: "export",  // ← これが必須
   images: {
     unoptimized: true,
   },
