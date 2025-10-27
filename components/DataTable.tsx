@@ -331,7 +331,7 @@ export default function DataTable({
 
       {/* Clear Confirmation Modal */}
       {showClearModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-8 border border-[#a2a2a2] max-w-lg shadow-xl">
             <p className="text-center text-base mb-8 text-black">
               ここまで入力したクラスと開始日を全て消去してもよろしいですか?
