@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# クラス配置CSV作成くん
 
-## Getting Started
+https://manabie.atlassian.net/wiki/spaces/~61c3b17749f195006991f4e0/pages/1821900823 
 
-First, run the development server:
+上記手順のCSV作成をサポートするアプリです。SFへのクラスメンバーCSVアップロードに適した形式のCSVを簡単に作成できます。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+アプリ: https://yukikaneko211.github.io/csv-formatter/ 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+UI・使い勝手は随時改善中です。担当者もしくは[GitHubのIssues](https://github.com/YukiKaneko211/csv-formatter/issues)までお寄せください。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+PRD: https://github.com/YukiKaneko211/csv-formatter/blob/main/CSV%20Formatter%20PRD.pdf
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 使い方
 
-## Learn More
+1. 「入力ファイル1をアップロード」画面で、1行目のヘッダ行が「生徒名, Location Course: 拠点コース, 授業の割当て: 授業の割当ID」のCSVをアップロードします。表示されたプレビューを確認したら、次に進みます。
+   1. SFのクラスメンバーCSV作成用LAリストを使用して、アップロード用のCSVをダウンロードできます。ヘッダ行が違うとエラーになるので、ヘッダ行は変更しないでください。
+2. 「入力ファイル2をアップロード」画面で、1行目のヘッダ行が「拠点コース: 拠点コース, クラス: クラス, クラス: ID」のCSVをアップロードします。表示されたプレビューを確認したら、次に進みます。
+   1. SFのクラスメンバーCSV作成用クラスリストを使用して、アップロード用のCSVをダウンロードできます。ヘッダ行が違うとエラーになるので、ヘッダ行は変更しないでください。
+3. 編集テーブル画面が表示されたら、生徒にクラスとクラスの開始日を設定します。
+   - 「全選択/ 全解除」ボタンでは、現在テーブルに表示されていない生徒も含めた全選択と全選択解除が行えます。
+   - テーブル左上のチェックボックスでは、テーブルに表示中の生徒に対し全選択と全選択解除ができます。
+   - チェックボックスで選択中の生徒に対して、開始日を同時に変更できます。
+   - 「生徒」と「拠点コース」プルダウンでは、アップロードしたファイルに含まれていた生徒と拠点コースが選択できます。選択した生徒名・拠点コースで、テーブルに表示される内容がフィルタリングされます。
+   - 「入力値を全てクリア」ボタンを押すと、確認画面を挟んで、入力したクラスと開始日を全て未選択状態に戻せます。
+4. 「CSVダウンロード」を押すと、現在のテーブルの内容でCSVがダウンロードできます。
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
