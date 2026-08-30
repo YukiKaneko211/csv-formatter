@@ -1,5 +1,21 @@
 # クラス配置CSV作成くん
 
+> [!NOTE]
+> **Note for International Reviewers / Technical Recruiters**
+> 
+> This application was built as an internal operational tool for a Japanese EdTech company I'm working for, to streamline data processing workflows for Salesforce uploads.  
+> As the primary end-users were Japanese operation staff, the UI and documentation are provided in Japanese.  
+> 
+> - **Client-Side CSV Formatting & Validation:** Parses and maps multiple structured CSV inputs with strict header/schema validation.
+> - **Interactive Data Processing:** Features client-side table filtering, bulk field updates (e.g., assignment dates), and dynamic row selection.
+> - **Export Capability:** Generates and downloads formatted CSV files compliant with target system schemas directly from the browser.
+> 
+> [Project Requirements Document](https://github.com/YukiKaneko211/csv-formatter/blob/main/CSV%20Formatter%20PRD.pdf) (in Japanese)
+>
+> [UI design on Figma](https://www.figma.com/design/SsU8az6hzpmOxdgSf1uoi8/%E3%82%AF%E3%83%A9%E3%82%B9%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BCCSV%E3%82%A2%E3%83%97%E3%83%AA?node-id=203-73&t=CJKfMSurXV3DO2bO-1)
+
+---
+
 https://manabie.atlassian.net/wiki/spaces/~61c3b17749f195006991f4e0/pages/1821900823 
 
 上記手順のCSV作成をサポートするアプリです。SFへのクラスメンバーCSVアップロードに適した形式のCSVを簡単に作成できます。
